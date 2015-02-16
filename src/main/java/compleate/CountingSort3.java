@@ -5,10 +5,9 @@ import java.util.*;
 /**
  * Created by Zveriki on 16.02.2015.
  */
-public class CountingSortNext {
+public class CountingSort3 {
 
     public static void main(String[] args) {
-
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         in.nextLine();
@@ -23,16 +22,17 @@ public class CountingSortNext {
             numbersRepeat.put(digit, count + 1);
         }
         List<Integer> output = new ArrayList<Integer>();
-        for (int limit = 0; limit < 99; limit++) {
+        for (int limit = 0; limit < 100; limit++) {
             int count = 0;
-            for (int check = 0; check < limit; check++) {
+            for (int check = 0; check <= limit; check++) {
                 if (numbersRepeat.containsKey(check)) count += numbersRepeat.get(check);
             }
             if (count>0) output.add(count);
         }
-        StringBuilder outputString = new StringBuilder(output.get(0));
-        for (int i=1; i<output.size()-1;i++) {
-            outputString.append(" ").append(i);
+        StringBuilder outputString = new StringBuilder();
+        outputString.append(output.get(0));
+        for (int i = 1; i < output.size(); i++) {
+            outputString.append(" ").append(output.get(i));
         }
         System.out.println(outputString.toString());
     }

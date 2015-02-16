@@ -10,10 +10,11 @@ public class AlternatingCharacters {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int a = in.nextInt();
+        in.nextLine();
         List<Integer> numberDeleting = new ArrayList<Integer>();
-        while (a >= 0) {
+        while (a > 0) {
             String inputString = in.nextLine();
-            numberDeleting.add(inputString.length() - inputString.replaceAll("([a-z])\\1+", "$1").length());
+            numberDeleting.add(inputString.length() - inputString.replaceAll("([A-Z])\\1+", "$1").length());
             a--;
         }
         for (Integer del : numberDeleting) {

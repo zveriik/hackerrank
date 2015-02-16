@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by Zveriki on 16.02.2015.
  */
-public class CountingSort {
+public class CountingSort2 {
 
     public static Integer[] array;
     public static int length;
@@ -54,7 +54,7 @@ public class CountingSort {
         array[j] = temp;
     }
 
-    public static void main(String a[]) {
+    public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -64,6 +64,7 @@ public class CountingSort {
         for (int i = 0; i < numbersString.length; i++) {
             unsortNumbers[i] = Integer.parseInt(numbersString[i]);
         }
+        //quickSort for example instead Collections.sort(unsortNumbers)
         sort(unsortNumbers);
         for (int i : unsortNumbers) {
             System.out.print(i);

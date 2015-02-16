@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by Zveriki on 13.02.2015.
  */
-public class LonelyInt {
+public class LonelyInteger {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

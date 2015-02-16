@@ -9,6 +9,6 @@ public class Pangram {
         String a;
         a = in.nextLine().toLowerCase().replaceAll(" ", "");
         Set<String> set = new HashSet<String>(Arrays.asList(a.split("")));
-        System.out.println(set.size() > 27 ? "pangram" : "not pangram");
+        System.out.println(set.size() > 26 ? "pangram" : "not pangram");
     }
 }

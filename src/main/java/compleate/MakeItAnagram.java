@@ -14,10 +14,6 @@ public class MakeItAnagram {
         b = in.nextLine();
         List<String> al = new ArrayList<String>(Arrays.asList(a.split("")));
         List<String> bl = new ArrayList<String>(Arrays.asList(b.split("")));
-
-        System.out.println(al);
-        System.out.println(bl);
-
         int count = 0;
         for (String s : al) {
             if (bl.contains(s)) {
